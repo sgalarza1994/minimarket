@@ -1,4 +1,6 @@
 <template>
+  <!-- index.vue -->
+
   <v-app
     :style="{
       background: $vuetify.theme.themes[theme].background,
@@ -13,7 +15,9 @@
       <!-- -->
     </side-bar>
 
-   
+    <app-bar class="">
+      <!-- -->
+    </app-bar>
     <!-- <sub-header>
       
     </sub-header> -->
@@ -24,13 +28,13 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 export default {
   components: {
-    BaseView: () => import("@/components/Home/View"),
-    SideBar: () => import("@/components/Home/Sidebar"),
-    AppBar: () => import("@/components/Home/AppBar"),
-    SubHeader: () => import("@/components/Home/SubHeader"),
+    BaseView: () => import("./View"),
+    SideBar: () => import("./Sidebar"),
+    AppBar: () => import("./AppBar"),
+    SubHeader: () => import("./SubHeader"),
   },
 
   computed: {
